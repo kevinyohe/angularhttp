@@ -1,0 +1,20 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "firstName": "Kevin",
+            "lastName": "Blowme"
+        },
+        {
+            "id": 2,
+            "firstName": "Kevin2",
+            "lastName": "Blowme2"
+        },
+        {
+            "id": 3,
+            "firstName": "K3vin",
+            "lastName": "Drainmynutz"
+        }
+
+    ]
+}
