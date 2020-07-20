@@ -4,6 +4,19 @@
 
 <ul>
     <li *ngFor="let contact of contactList">
-        {{ contact.firstName }}
+        {{ contact.firstName }} {{ contact.lastName }}
     </li>
 </ul>
+
+<h3>Creat3e New Contact</h3>
+<code>pening</code>
+<div *ngIf="msgTrue">Contact created</div>
+<br>
+
+<form #addNewContactForm="ngForm" (submit)="addNewContact(addNewContactForm)">
+    <input type="text" class="form-control" name="id" required ngModel />
+    <input type="text" class="form-control" name="firstName" required ngModel />
+    <input type="text" class="form-control" name="lastName" required ngModel />
+<button class="form-control" [disabled]="!addNewContactForm.valid">ADD NEW CONTACT</button>
+
+</form>

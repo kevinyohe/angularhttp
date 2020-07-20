@@ -17,4 +17,10 @@ export class ContactsService {
 
     return this.HttpCient.get('http://localhost:3000/contacts', { headers: httpHeaders });  //returns observable
   }
+  createContact(createResource){
+    const httpHeaders = new HttpHeaders();
+
+    httpHeaders.append('content-type', 'application/json')
+    return this.HttpCient.post('Http://localhost:3000/contacts', createResource, {headers: httpHeaders})
+  }
 }
