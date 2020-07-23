@@ -8,15 +8,16 @@
     </li>
 </ul>
 
-<h3>Creat3e New Contact</h3>
-<code>pening</code>
+<h3>Create New Contact</h3>
+<code>form</code>
 <div *ngIf="msgTrue">Contact created</div>
 <br>
 
 <form #addNewContactForm="ngForm" (submit)="addNewContact(addNewContactForm)">
-    <input type="text" class="form-control" name="id" required ngModel />
-    <input type="text" class="form-control" name="firstName" required ngModel />
-    <input type="text" class="form-control" name="lastName" required ngModel />
-<button class="form-control" [disabled]="!addNewContactForm.valid">ADD NEW CONTACT</button>
+    <div><label>id</label>
+        <input type="text" class="form-control" name="id" required ngModel /></div>
+    <div><input type="text" class="form-control" name="firstName" required ngModel /></div>
+    <div><input type="text" class="form-control" name="lastName" required ngModel /></div>
+<div><button class="form-control" [disabled]="!addNewContactForm.valid">ADD NEW CONTACT</button></div>
 
 </form>

@@ -1,0 +1,15 @@
+<label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+  <label>
+    IP address:
+    <input type="text" [formControl]="ipaddress">
+  </label>
+  <p>
+    Value: {{ name.value }} IP: {{ipaddress.value}}
+  </p>
+
+  <p>
+    <button (click)="updateName()">Update Name</button>
+  </p>

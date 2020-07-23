@@ -23,7 +23,7 @@ export class ContactsComponent implements OnInit {
     //const newFormData = { id: 6, firstName: "Sruthi", lastName: "Koala"}
     console.log(form.value.firstName);
     console.log(form.value.lastName);
-    let newFormData = {id: form.value.id, firstName: form.value.id, lastName: form.value.lastName }
+    let newFormData = {id: form.value.id, firstName: form.value.firstName, lastName: form.value.lastName }
     this.contactService.createContact(newFormData).subscribe(data => {
       this.msgTrue = true;
     })

@@ -23,4 +23,11 @@ export class ContactsService {
     httpHeaders.append('content-type', 'application/json')
     return this.HttpCient.post('Http://localhost:3000/contacts', createResource, {headers: httpHeaders})
   }
+  updateContact(contactId, updateResource){
+    const httpHeaders = new HttpHeaders();
+
+    httpHeaders.append('content-type', 'application/json')
+    let url = 'Http://localhost:3000/contacts/' + contactId
+    return this.HttpCient.put(url, updateResource, {headers: httpHeaders})
+  }
 }
